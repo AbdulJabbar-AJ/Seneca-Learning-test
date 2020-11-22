@@ -1,0 +1,14 @@
+[ignore]
+.*/__tests__/.*
+.*/node_modules/styled-components/.*
+<PROJECT_ROOT>/dist/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
