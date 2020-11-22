@@ -1,0 +1,29 @@
+{
+  "name": "seneca-tech-task",
+  "version": "1.0.0",
+  "description": "Seneca Learning React tech task",
+  "main": "src/index.html",
+  "scripts": {
+    "serve": "parcel src/index.html --no-cache",
+    "build": "parcel build src/index.html --no-source-maps"
+  },
+  "keywords": [
+    "react",
+    "flow"
+  ],
+  "author": "Abdul Jabbar",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7"
+  }
+}
