@@ -1,10 +1,6 @@
 // @flow
-import React, {type Node, useState} from 'react';
-import styled from 'styled-components'
-
-const Option = styled.div`
-	color: ${props => props.selected ? 'red' : 'black'};
-`
+import React, {type Node} from 'react';
+import Option from './toggleOptionStyles'
 
 type Props = {
 	name: string,
@@ -16,7 +12,7 @@ type Props = {
 export default function ToggleOption({name, value, selected, toggleValue}: Props) :Node {
 	return (
 		<Option {...{selected, onClick: () => toggleValue(value)}}>
-			{name}
+			<div>{name}</div>
 		</Option>
 	)
 }
