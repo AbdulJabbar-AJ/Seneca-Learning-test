@@ -22,30 +22,15 @@ const Question = styled.div`
 	
 	.togglesContainer {
 		margin: 0 1rem;
-		max-width: calc(100% - 2rem);
-		min-width: fit-content;
-		// margin: auto;
-		// max-width: calc(100% - 2rem);
-		// min-width: max-content;
-		// min-width: fit-content;
-		
+		margin: 0 15%;
+		@media only screen and (max-width: 768px) {
+			margin: 0 1rem;
+		}	
 	}
 
 	.toggles {
 		display: grid;
 		grid-gap: 1rem;
-		// margin: auto;
-		// max-width: fit-content;
-		
-		// width: fit-content;
-		// margin: auto;
-		// max-width: max-content;
-		// margin: 0 1rem;
-		// max-width: 90%;
-		// @media only screen and (max-width: 768px) {
-		// 	width: calc(100% - 2rem);
-		// 	max-width: max-content;
-		// }	
 	}
 `
 
