@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Option = styled.div`
-	color: ${props => props.selected ? '#e66549' : '#fbfbfb'};
+	color: ${props => props.selected ? '#444444' : '#fbfbfb'};
 	border-radius: 3rem;
 	width: 50%;
 	padding: 1rem;
