@@ -1,35 +1,31 @@
 // @flow
 import React, {type Node, useEffect, useState} from 'react';
-import Toggle, {type ToggleObject} from '../toggle/toggle'
+import Toggle from '../toggle/toggle'
 import generateGradient from './bgGradient'
 import Question from './togglesQuestionStyles'
+import { type Dataset } from '../dataLoader/datasetActions'
 
-
-type Props = {
-	question: string,
-	toggles: ToggleObject[],
-}
-
-
-
-export default function TogglesQuestion({question, toggles}: Props): Node {
+export default function TogglesQuestion({question, toggles}: Dataset): Node {
 	const [selectedValues, setSelectedValues] = useState(Array(toggles.length).fill(0))
 	const [colours, setColours] = useState(Array(toggles.length).fill(0))
 	const [isCorrect, setIsCorrect] = useState(false)
+	const [correctAnswer, setCorrectAnswer] = useState([])
 	const [mark, setMark] = useState(0)
 
-	const correctAnswer = toggles.map(toggle => toggle.answer)
 
 	useEffect(() => {
-		randomiseValues()
+		setCorrectAnswer(toggles.map(toggle => toggle.answer))
+		setSelectedValues(Array(toggles.length).fill(0))
 		setColours(calcColours())
-	}, [])
-
+		setIsCorrect(false)
+	}, [question])
+	useEffect(() => { randomiseValues() }, [correctAnswer])
 	useEffect(() => { checkAnswer(selectedValues) && setIsCorrect(true) }, [selectedValues])
+
 
 	const randomiseValues = () => {
 		const randomArray = selectedValues.map(() => Math.floor(Math.random()*2))
-		checkAnswer(randomArray) ? setIsCorrect(false) && randomiseValues() : setSelectedValues(randomArray)
+		checkAnswer(randomArray) ? randomiseValues() : setSelectedValues(randomArray)
 	}
 
 	function checkAnswer(values: number[]): boolean {
@@ -39,7 +35,6 @@ export default function TogglesQuestion({question, toggles}: Props): Node {
 			value === correctAnswer[index] ? score++ : null
 		})
 		setMark(score)
-
 		return score / total === 1
 	}
 
@@ -92,8 +87,6 @@ export default function TogglesQuestion({question, toggles}: Props): Node {
 		// })
 		return colours
 	}
-
-
 
 	return (
 		<Question colours={colours} mark={mark}>

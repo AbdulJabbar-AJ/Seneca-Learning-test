@@ -17,7 +17,8 @@ const Question = styled.div`
 
 	.question, .answer {
 		height: 100%;
-		line-height: 4rem;
+		line-height: 1rem;
+		padding: 1.5rem
 	}
 	
 	.togglesContainer {

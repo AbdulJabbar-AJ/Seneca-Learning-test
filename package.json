@@ -12,6 +12,10 @@
     "react",
     "flow"
   ],
+  "browserslist": ">0.25%, not dead",
+  "babel": {
+    "presets": [ "@babel/preset-env", "@babel/preset-react", "@babel/preset-flow" ]
+  },
   "author": "Abdul Jabbar",
   "license": "ISC",
   "dependencies": {

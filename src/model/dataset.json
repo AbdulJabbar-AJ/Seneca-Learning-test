@@ -1,0 +1,31 @@
+[
+    {
+        "question": "An animal cell contains",
+        "toggles": [
+            { "options": [ "Cell wall", "Ribosomes" ], "answer": 1 },
+            { "options": [ "Cytoplasm", "Chloroplast" ], "answer": 0 },
+            { "options": [ "Partially permeable membrane", "Impermeable membrane" ], "answer": 0 },
+            { "options": [ "Cellulose", "Mitochondria" ], "answer": 1 }
+        ]
+    },
+    {
+        "question": "What are the ideal conditions inside an office?",
+        "toggles": [
+            { "options": [ "Good pay", "Bad pay" ], "answer": 0 },
+            { "options": [ "Lots of meetings", "Less meetings" ], "answer": 1 },
+            { "options": [ "Free coffee", "Expensive coffee" ], "answer": 0 },
+            { "options": [ "Bear in office", "Dog in office" ], "answer": 1 }
+        ]
+    },
+    {
+        "question": "This candidate will:",
+        "toggles": [
+            { "options": [ "Keep four toggles on this dataset", "Add an additional toggle" ], "answer": 1 },
+            { "options": [ "Leave a good impression", "Leave a bad impression" ], "answer": 0 },
+            { "options": [ "Be the worst candidate for the job", "Be the best candidate for the job" ], "answer": 1 },
+            { "options": [ "Not receive an offer", "Receive an offer he can't refuse" ], "answer": 1 },
+            { "options": [ "Enjoy working for Seneca", "Dislike working for Seneca" ], "answer": 0 },
+            { "options": [ "Enjoy working for Seneca", "Dislike working for Seneca" ], "answer": 0 }
+        ]
+    }
+]
