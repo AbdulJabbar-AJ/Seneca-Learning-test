@@ -40,7 +40,8 @@ export default function TogglesQuestion({question, toggles}: Dataset): Node {
 	// ... because there are much less side effects occurring, but I did a screen record and slowed it down to confirm, it still happens)
 
 	// Also, This could potentially be an issue if there are two question with the same string but with different toggles (i.e. the second one expands on the first question)
-	// we could either force an unmount between questions, or perhaps the use case is such that each of these components do not share a div with the other (I believe your app works like that)
+	// we could either force an unmount between questions,
+	// OR perhaps the use case is such that each of these components do not share a div with any other (I believe your app works like that). This would eliminate the need for the questionString state
 
 
 	// Mark the question
