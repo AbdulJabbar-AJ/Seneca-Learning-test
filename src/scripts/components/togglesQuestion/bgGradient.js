@@ -1,4 +1,4 @@
-export default function generateGradient(colourA, colourB, noOfColoursRequired) { // assume rgba
+function generateGradient(colourA, colourB, noOfColoursRequired) { // assume rgba
 	const results = []
 	const steps = noOfColoursRequired - 1
 
@@ -29,5 +29,46 @@ export default function generateGradient(colourA, colourB, noOfColoursRequired) 
 	pushResult(...c2)
 
 	return results;
+}
+
+
+
+
+
+
+export default function calcColours(toggles: []): string[] {
+	const colA = '247,59,28,0.7'
+	const colB = '244, 187, 49, 1'
+	const colC = '7, 205, 221, 1'
+	const colours = []
+
+
+	if (toggles.length === 1) {
+		colours.push(`rgba(${colA})`)
+		colours.push(`rgba(${colC})`)
+	} else if (toggles.length == 2) {
+		colours.push(`rgba(${colA})`)
+		colours.push(`rgba(${colB})`)
+		colours.push(`rgba(${colC})`)
+	} else {
+		let splitA
+		let splitB
+
+		if (toggles.length % 2 == 0) {
+			splitA = (toggles.length/2) + 1
+			splitB = splitA
+		} else {
+			splitB = (toggles.length + 1) / 2
+			splitA = splitB + 1
+		}
+
+		const partA = generateGradient(colA, colB, splitA)
+		const partB = generateGradient(colB, colC, splitB)
+		partA.forEach(colour => colours.push(colour))
+		colours.pop()
+		partB.forEach(colour => colours.push(colour))
+	}
+
+	return colours
 }
 

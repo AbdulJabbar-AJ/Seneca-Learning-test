@@ -27,7 +27,6 @@ const StyledToggle = styled.div`
 		right:${props => props.selectedValue === 1 ? 0 : 'unset'};
 		&.slideRight { animation: 0.3s ${slideRight} ease-out forwards };
 		&.slideLeft { animation: 0.3s ${slideRight} ease-out reverse };
-		// animation: 0.8s ${slideRight} ease-out reverse
 	}
 `
 

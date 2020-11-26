@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import {type Node, useEffect} from 'react'
+import {type Node} from 'react'
 import { connect } from 'react-redux'
 import datasets from '../../../model/dataset.json'
 import { type Dataset, type DatasetAction, setData } from './datasetActions'
@@ -11,9 +11,7 @@ type Props = {
 }
 
 function DataLoader({setData}: Props): Node {
-	useEffect(() => {
-		setData(datasets[0])
-	}, [])
+	setData(datasets[0])
 
 	return (
 		<Loader>

@@ -5,7 +5,7 @@ const Question = styled.div`
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: ${props => props.colours[props.mark]};
+	background-color: ${props => props.bgColour};
 	box-shadow: 0 2px 12px 6px rgba(167, 196, 220, 0.5);
 	max-width: 900px;	
 	margin: auto;

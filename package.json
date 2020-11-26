@@ -4,7 +4,7 @@
   "description": "Seneca Learning React tech task",
   "main": "src/index.html",
   "scripts": {
-    "serve": "parcel src/index.html --no-cache",
+    "serve": "parcel src/index.html",
     "build": "rm -rf dist && parcel build src/index.html --no-source-maps",
     "flow": "flow"
   },

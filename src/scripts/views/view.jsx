@@ -19,8 +19,8 @@ type Props = { dataset: Dataset }
 function View({dataset}: Props): Node {
 	return (
 		<StyledView>
-			<DataLoader />
 			<GlobalStyles />
+			<DataLoader />
 			{dataset.question && <TogglesQuestion {...{question: dataset.question, toggles: dataset.toggles}} />}
 		</StyledView>
 	)
